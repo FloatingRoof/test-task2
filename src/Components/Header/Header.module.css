@@ -1,0 +1,12 @@
+.headerWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
