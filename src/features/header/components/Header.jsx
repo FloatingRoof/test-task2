@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from "../../assets/images/logo.png"
-import book from "../../assets/images/Book.png"
-import applications from "../../assets/images/applications.png"
-import employees from "../../assets/images/employees.png"
-import clients from "../../assets/images/clients.png"
-import assets from "../../assets/images/assets.png"
-import settings from "../../assets/images/settings.png"
+import logo from "../../../assets/images/logo.png"
+import book from "../../../assets/images/Book.png"
+import applications from "../../../assets/images/applications.png"
+import employees from "../../../assets/images/employees.png"
+import clients from "../../../assets/images/clients.png"
+import assets from "../../../assets/images/assets.png"
+import settings from "../../../assets/images/settings.png"
 
 import classes from "./Header.module.css"
 import {NavLink} from "react-router-dom";
@@ -28,6 +28,8 @@ export const Header = (props) => {
                     <MenuItem to="/assets" icon={assets} text="Активы"/>
                     <MenuItem to="/settings" icon={settings} text="Настройки"/>
                 </ul>
+                <span className={classes.copyright}>IntraService<br/>5.0.0</span>
+
             </div>
         </div>
     )

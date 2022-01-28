@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Header} from "./features/header/Header";
+import {Header} from "./features/header/components/Header";
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {store} from "./redux/store";
@@ -19,8 +19,12 @@ function App() {
         <div className="App">
             <div className="App__header-block">
                 <Header/>
+
             </div>
-            <div className="App_content-block">
+            <div className="App__content-block">
+                <div className="App__search">
+dsadas
+                </div>
                 <Routes>
                     <Route path="/applications" element={<Applications />}/>
                     <Route path="/clients" element={<Clients />}/>
@@ -28,12 +32,11 @@ function App() {
                     <Route path="/knowledge-base" element={<KnowledgeBase />}/>
                     <Route path="/employees" element={<Employees />}/>
                     <Route path="/assets" element={<Assets />}/>
-
                 </Routes>
-
             </div>
 
         </div>
+
             </Provider>
         </BrowserRouter>
     );
