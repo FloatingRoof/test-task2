@@ -20,7 +20,7 @@ width: 100%;
 .logo{
     height: 65px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 .menu ul{
     padding: 0;
