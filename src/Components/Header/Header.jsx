@@ -2,6 +2,7 @@ import React from 'react';
 import logo from "../../assets/images/logo.png"
 import book from "../../assets/images/Book.png"
 import classes from "./Header.module.css"
+import {NavLink} from "react-router-dom";
 
 export const Header = (props) => {
     return (
@@ -9,11 +10,13 @@ export const Header = (props) => {
             <div className={classes.logo}>
                 <img src={logo}/>
             </div>
-            <div>
+            <div className={classes.menu}>
                 <ul>
-                    <li>
-                        <img src={book}/>
-                        База знаний
+                    <li className={classes.item}>
+                            <div>
+                                <img src={book}/>
+                            </div>
+                            База знаний
                     </li>
                 </ul>
             </div>
