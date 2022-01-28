@@ -1,9 +1,16 @@
 import React from 'react';
 import './App.css';
-import {Header} from "./Components/Header/Header";
+import {Header} from "./features/header/Header";
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {store} from "./redux/store";
+import {Route, Routes} from "react-router";
+import {Applications} from "./features/applications/components/Applications";
+import {Clients} from "./features/clients/components/Clients";
+import {Settings} from "./features/settings/components/Settings";
+import {KnowledgeBase} from "./features/knowledge-base/components/Knowledge-base";
+import {Employees} from "./features/employees/components/Employees";
+import {Assets} from "./features/assets/components/Assets";
 
 function App() {
     return (
@@ -14,6 +21,15 @@ function App() {
                 <Header/>
             </div>
             <div className="App_content-block">
+                <Routes>
+                    <Route path="/applications" element={<Applications />}/>
+                    <Route path="/clients" element={<Clients />}/>
+                    <Route path="/settings" element={<Settings />}/>
+                    <Route path="/knowledge-base" element={<KnowledgeBase />}/>
+                    <Route path="/employees" element={<Employees />}/>
+                    <Route path="/assets" element={<Assets />}/>
+
+                </Routes>
 
             </div>
 
