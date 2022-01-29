@@ -1,20 +1,63 @@
-
-.blockButton{
-    margin-top: 25px;
-    margin-left: 260px;
+th,td{
+    box-sizing: border-box;
+    height: 50px;
 }
 
-.buttonCreate{
-    background-color: #008cf0;
-    border: 0;
-    border-radius: 30px;
-    color: #fff;
-    height: 40px;
-    width: 180px;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
+th span, td span{
+   margin-left: 15px;
 }
 
-.buttonCreate:hover{
-    opacity: 0.6;
+
+tr{
+    border-bottom: 1px solid  #eef1f4;
 }
+thead tr{
+    border-bottom: 1px solid  #dae0e7;
+}
+
+
+.blockTable{
+    text-align: left;
+}
+
+.blockTable table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.color{
+    width: 20px;
+}
+
+.id{
+    width: 95px;
+    /*border-right: 1px solid grey;*/
+    position: relative;
+}
+
+.title:before, .status:before, .executor:before{
+    width: 1px;
+    height: 20px;
+    background-color: #e2e7ea;
+    content: "";
+    position: absolute;
+    top:15px;
+}
+
+
+.title{
+    position: relative;
+    width: 420px;
+}
+
+.status{
+    position: relative;
+    width: 125px;
+}
+
+.executor{
+    position: relative;
+    width: calc(100% - 660px);
+}
+
+

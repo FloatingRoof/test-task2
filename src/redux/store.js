@@ -1,9 +1,10 @@
 import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import thunkMiddleware from "redux-thunk"
+import {applicationReducer} from "../features/applications/modules/reducer";
 
 
 let reducers = combineReducers({
-
+    applicationReducer: applicationReducer,
 })
 
 
