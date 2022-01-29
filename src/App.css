@@ -30,4 +30,5 @@
 
 .App__search{
   grid-area: s;
+  box-shadow: 3px 3px 5px rgba(34, 60, 80, 0.15);
 }

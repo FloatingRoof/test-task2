@@ -22,7 +22,7 @@
 
 .field input{
     height: 34px;
-    border: 0px;
+    border: 0;
     width: 620px;
     border-radius: 30px;
     padding-left: 20px;
@@ -35,7 +35,7 @@
     height: 34px;
 
     border-radius: 30px;
-    border: 0px;
+    border: 0;
     cursor: pointer;
 }
 
