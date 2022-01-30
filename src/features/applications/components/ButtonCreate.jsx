@@ -3,7 +3,7 @@ import classes from "./ButtonCreate.module.css"
 export const ButtonCreate = (props) =>{
     return(
         <div className={classes.blockButton}>
-            <button onClick={props.click} className={classes.buttonCreate}>Создать заявку</button>
+            <button disabled={props.disabled} type={props.type} onClick={props.click} className={classes.buttonCreate}>{props.children}</button>
         </div>
     )
 }

@@ -1,89 +1,98 @@
-th,td{
+th, td {
     box-sizing: border-box;
     height: 55px;
 }
 
-th span, td span{
-   margin-left: 15px;
+th span, td span {
+    margin-left: 15px;
     width: 100%;
     height: 55px;
-    color:#525460;
+    color: #525460;
     font-size: 16px;
 }
 
 
-tr{
-    border-bottom: 1px solid  #eef1f4;
+tr {
+    border-bottom: 1px solid #eef1f4;
 }
-thead  span{
-    color:#404147;
+
+thead span {
+    color: #404147;
     font-size: 16px;
     height: 50px;
 }
-thead tr{
-    border-bottom: 1px solid  #dae0e7;
+
+thead tr {
+    border-bottom: 1px solid #dae0e7;
     height: 50px;
 
 }
 
-thead th{
+thead th {
     height: 50px;
 }
 
-.main{
+.main {
     position: relative;
 }
-.blockTable{
+
+.blockButton {
+    margin-top: 25px;
+    margin-left: 260px;
+
+}
+
+.blockTable {
     text-align: left;
 }
 
-.blockTable table{
+.blockTable table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.color{
+.color {
     width: 20px;
 }
 
-.id{
+.id {
     width: 95px;
     /*border-right: 1px solid grey;*/
     position: relative;
 }
 
-.title:before, .status:before, .executor:before{
+.title:before, .status:before, .executor:before {
     width: 1px;
     height: 20px;
     background-color: #e2e7ea;
     content: "";
     position: absolute;
-    top:15px;
+    top: 15px;
 }
 
 
-.title{
+.title {
     position: relative;
     width: 420px;
 }
 
-.status{
+.status {
     position: relative;
     width: 125px;
 }
 
-.executor{
+.executor {
     position: relative;
     width: calc(100% - 660px);
 }
 
-.statusBlock{
+.statusBlock {
     border-radius: 30px;
     color: #ffffff;
     padding: 5px 15px;
 }
 
-.priority{
+.priority {
     width: 5px;
     height: 50px;
     margin-left: 2px;

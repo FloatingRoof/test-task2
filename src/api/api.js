@@ -1,6 +1,5 @@
 import axios from "axios";
-//6f0ef1b6-824e-4335-a4b4-a1ab3539a9a2
-const tenantguid = "79c3a821-6ff8-4f78-bb9d-e6ffcef7bb79";
+const tenantguid = "e8883450-dfcc-448f-9098-050a11045b5f";
 
 const instance = axios.create({
     //куки

@@ -13,8 +13,8 @@ export const Applications = (props) => {
     return (
         <div className={classes.main}>
             {taskMore && <TaskMore setTaskMore={setTaskMore}/>}
-            <div>
-                <ButtonCreate click={openTaskMore}/>
+            <div className={classes.blockButton}>
+                <ButtonCreate click={openTaskMore}>Создать заявку</ButtonCreate>
             </div>
 
             <div className={classes.blockTable}>
