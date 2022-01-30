@@ -1,15 +1,13 @@
 import {ButtonCreate} from "./ButtonCreate";
 import classes from "./Applications.module.css"
 import React from "react";
-import {compose} from "redux";
-import {connect} from "react-redux";
-import {getApplicationData} from "../modules/reducer";
+import {Task} from "./Task";
 
 export const Applications = (props) => {
     return (
         <>
             <div>
-                <ButtonCreate click={props.getApplicationData}/>
+                <ButtonCreate/>
             </div>
 
             <div className={classes.blockTable}>
@@ -40,37 +38,22 @@ export const Applications = (props) => {
                          </span>
                         </th>
                     </tr>
-
                     </thead>
                     <tbody>
+                    {
 
-                    <tr>
-                        <td>
-                            <span>
-                                 color
-                            </span>
-                        </td>
-                        <td>
-                            <span>
-                                ID
-                            </span>
-                        </td>
-                        <td>
-                            <span>
-                                Название
-                            </span>
-                        </td>
-                        <td>
-                            <span>
-                                Статус
-                            </span>
-                        </td>
-                        <td>
-                            <span>
-                               Исполнитель
-                            </span>
-                        </td>
-                    </tr>
+                        props.tasks.map(
+                            t => <Task id={t.id} executor={t.executorName} statusRgb={t.statusRgb} status={t.statusName} title={t.name}
+                                       key={t.id} priorityColor={props.priorities.filter(p => {return p.id == t.priorityId})[0].rgb}/>)
+                    }
+
+
+                    {
+
+                        props.tasks.map(
+                            t => <Task id={t.id} executor={t.executorName} statusRgb={t.statusRgb} status={t.statusName} title={t.name}
+                                       key={t.id} priorityColor={props.priorities.filter(p => {return p.id == t.priorityId})[0].rgb}/>)
+                    }
                     </tbody>
                 </table>
             </div>
@@ -79,8 +62,3 @@ export const Applications = (props) => {
     )
 }
 
-let mapStateToProps = (state) => ({})
-export default compose(
-    connect(mapStateToProps, {getApplicationData}),
-    /* withAuthRedirect*/
-)(Applications);

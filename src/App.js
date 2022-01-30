@@ -4,14 +4,14 @@ import {Header} from "./features/header/components/Header";
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {store} from "./redux/store";
-import {Route, Routes} from "react-router";
-import Applications from "./features/applications/components/Applications";
+import {Route, Routes} from "react-router-dom";
 import {Clients} from "./features/clients/components/Clients";
 import {Settings} from "./features/settings/components/Settings";
 import {KnowledgeBase} from "./features/knowledge-base/components/Knowledge-base";
 import {Employees} from "./features/employees/components/Employees";
 import {Assets} from "./features/assets/components/Assets";
 import {Search} from "./features/header/components/Search";
+import {ApplicationContainer} from "./features/applications/components/ApplicationsContainer";
 
 function App() {
     return (
@@ -27,7 +27,7 @@ function App() {
                             <Search/>
                         </div>
                         <Routes>
-                            <Route path="/applications" element={<Applications/>}/>
+                            <Route path="/applications" element={<ApplicationContainer/>}/>
                             <Route path="/clients" element={<Clients/>}/>
                             <Route path="/settings" element={<Settings/>}/>
                             <Route path="/knowledge-base" element={<KnowledgeBase/>}/>
