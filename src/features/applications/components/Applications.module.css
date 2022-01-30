@@ -30,7 +30,9 @@ thead th{
     height: 50px;
 }
 
-
+.main{
+    position: relative;
+}
 .blockTable{
     text-align: left;
 }
