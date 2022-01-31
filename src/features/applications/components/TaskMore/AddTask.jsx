@@ -13,9 +13,8 @@ export const AddTask = (props) => {
         description: "",
     };
 
-    const onSubmit = async (values, {setStatus, setSubmitting}) => {
-        setStatus("");
-        let idCreatedTask = await props.createNewTask(values.title, values.description,setStatus );
+    const onSubmit = async (values, {setSubmitting}) => {
+        let idCreatedTask = await props.createNewTask(values.title, values.description );
         setSubmitting(false);
         props.setEditId(idCreatedTask);
         props.setEditMode(true);

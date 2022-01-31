@@ -20,7 +20,7 @@ export const EditTask = (props) => {
         comment: "",
         executor: props.task.executorId
     };
-    const onSubmit = async (values, {setStatus, setSubmitting}) => {
+    const onSubmit = async (values, { setSubmitting}) => {
         await props.editTask(props.task.id, values.status, values.executor);
         setEditStatus(false);
         setEditExecutor(false);

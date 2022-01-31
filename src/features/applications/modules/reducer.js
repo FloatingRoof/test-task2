@@ -95,7 +95,7 @@ export const getApplicationData = () => async (dispatch) => {
 }
 
 
-export const createNewTask = (name, description, setStatus) => async (dispatch) => {
+export const createNewTask = (name, description) => async (dispatch) => {
     let response = await applicationsAPI.createTask(name, description);
     if (response.status == 200) {
         let responseNewTaskData = await applicationsAPI.getTaskById(response.data)
