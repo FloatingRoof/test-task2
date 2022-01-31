@@ -7,14 +7,30 @@ import {TaskMore} from "./TaskMore/TaskMore";
 export const Applications = (props) => {
 
     let [taskMore, setTaskMore] = useState(false);
-    const openTaskMore = () => {setTaskMore(true)}
+    let [editMode, setEditMode] = useState(false);
+    let [editId, setEditId] = useState(-1);
+
+
+    const openTaskMoreWithCreateTask = () => {
+        setEditMode(false);
+        setTaskMore(true);
+    }
 
 
     return (
         <div className={classes.main}>
-            {taskMore && <TaskMore setTaskMore={setTaskMore}/>}
+            {
+                taskMore && <TaskMore
+                    task={editMode && props.tasks.filter(t => {
+                        return t.id == editId
+                    })[0]}
+                    id={editMode && editId} editMode={editMode} setTaskMore={setTaskMore}
+                    createNewTask={props.createNewTask}
+                    setEditMode={setEditMode}
+                    setEditId={setEditId}
+                />}
             <div className={classes.blockButton}>
-                <ButtonCreate click={openTaskMore}>Создать заявку</ButtonCreate>
+                <ButtonCreate click={openTaskMoreWithCreateTask}>Создать заявку</ButtonCreate>
             </div>
 
             <div className={classes.blockTable}>
@@ -50,23 +66,15 @@ export const Applications = (props) => {
                     {
 
                         props.tasks.map(
-                            t => <Task id={t.id} executor={t.executorName} statusRgb={t.statusRgb} status={t.statusName}
+                            t => <Task setEditId={setEditId} setTaskMore={setTaskMore} setEditMode={setEditMode}
+                                       id={t.id}
+                                       executor={t.executorName} statusRgb={t.statusRgb} status={t.statusName}
                                        title={t.name}
                                        key={t.id} priorityColor={props.priorities.filter(p => {
                                 return p.id == t.priorityId
                             })[0].rgb}/>)
                     }
 
-
-                    {
-
-                        props.tasks.map(
-                            t => <Task id={t.id} executor={t.executorName} statusRgb={t.statusRgb} status={t.statusName}
-                                       title={t.name}
-                                       key={t.id} priorityColor={props.priorities.filter(p => {
-                                return p.id == t.priorityId
-                            })[0].rgb}/>)
-                    }
                     </tbody>
                 </table>
             </div>

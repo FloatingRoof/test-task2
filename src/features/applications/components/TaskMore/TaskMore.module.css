@@ -25,6 +25,15 @@
     color: #ffffff;
     font-size: 16px;
     display: flex;
+    width: calc(100% - 100px);
+
+}
+
+.taskName{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 15px;
 }
 
 .taskClose {
@@ -90,4 +99,8 @@
 
 .blockButton{
     margin-top: 55px;
+}
+
+.content{
+    height: calc(100% - 130px);
 }

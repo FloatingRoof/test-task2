@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {compose} from "redux";
 import {connect} from "react-redux";
-import {deleteTasks, getApplicationData} from "../modules/reducer";
+import {createNewTask, deleteTasks, getApplicationData} from "../modules/reducer";
 import {Applications} from "./Applications";
 import Preloader from "../../common/Preloader/Preloader";
 
@@ -23,7 +23,7 @@ const ApplicationEffects = (props) => {
 
     return (
         <>
-            {props.tasks.length ? <Applications tasks={props.tasks} priorities={props.priorities}/> : <Preloader />}
+            {props.tasks.length ? <Applications {...props} /> : <Preloader />}
         </>
     )
 }
@@ -36,5 +36,5 @@ let mapStateToProps = (state) => {
 }
 
 export const ApplicationContainer = compose(
-    connect(mapStateToProps, {getApplicationData,deleteTasks}),
+    connect(mapStateToProps, {getApplicationData,createNewTask,deleteTasks}),
 )(ApplicationEffects);

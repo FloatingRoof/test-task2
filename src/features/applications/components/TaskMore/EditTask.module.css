@@ -1,0 +1,61 @@
+
+.formEdit {
+
+
+    display: grid;
+    grid-template-areas: "l r";
+    grid-template-columns: 2fr 230px;
+    height: 100%;
+}
+
+.leftInformation{
+    grid-area: l;
+    padding: 50px 35px;
+
+}
+
+.rightInformation{
+    grid-area: r;
+    border-left: 1px solid #d7dce0;
+    padding: 50px 35px;
+
+}
+
+
+.formAddBlock {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+}
+
+.formEditLabel {
+    line-height: 24px;
+    font-size: 14px;
+    color: #9f9ea7;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+.formEditTextareaDescription {
+    color:#525460;
+    padding-top: 10px;
+    height: 90px;
+    border: 0;
+    background-color: transparent;
+    resize: none;
+    font-size: 16px;
+}
+
+.formEditTextareaDescription:focus {
+    outline: none;
+}
+
+
+.blockButton{
+    margin-top: 55px;
+}

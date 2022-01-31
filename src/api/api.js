@@ -1,5 +1,6 @@
 import axios from "axios";
-const tenantguid = "e8883450-dfcc-448f-9098-050a11045b5f";
+
+const tenantguid = "8c69c5d0-5600-4d67-8c20-4c851416e3ff";
 
 const instance = axios.create({
     //куки
@@ -9,10 +10,16 @@ const instance = axios.create({
 
 export const applicationsAPI = {
     getApplications() {
-        return instance.get(`odata/tasks?tenantguid=${tenantguid}`)
+        return instance.get(`odata/tasks?tenantguid=${tenantguid}`);
     },
 
     getPriorities() {
-        return instance.get(`api/${tenantguid}/Priorities`)
+        return instance.get(`api/${tenantguid}/Priorities`);
     },
+    createTask(name , description = "", statusId = 120066) {
+        return instance.post(`api/${tenantguid}/Tasks`, {name, description, statusId});
+    },
+    getTaskById(id) {
+        return instance.get(`/api/${tenantguid}/Tasks/${id}`);
+    }
 }

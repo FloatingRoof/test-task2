@@ -99,6 +99,9 @@ thead th {
     border-radius: 2px;
 }
 
+.itemTask{
+    cursor: pointer;
+}
 
 
 

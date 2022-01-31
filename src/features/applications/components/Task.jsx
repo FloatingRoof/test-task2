@@ -1,12 +1,14 @@
 import classes from "./Applications.module.css"
 import React from "react";
-import cn from "classnames"
-import preloader from "../../../assets/images/preloader.svg";
 
 
 export const Task = (props) => {
     return (
-        <tr>
+        <tr className={classes.itemTask} onClick={() => {
+            props.setEditMode(true);
+            props.setTaskMore(true);
+            props.setEditId(props.id);
+        }}>
             <td>
 
                 <div className={classes.priority} style={{backgroundColor: props.priorityColor}}>

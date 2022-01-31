@@ -15,15 +15,17 @@ export const AddTask = (props) => {
 
     const onSubmit = async (values, {setStatus, setSubmitting}) => {
         setStatus("");
-        await props.onSubmit(values, setStatus);
+        let idCreatedTask = await props.createNewTask(values.title, values.description,setStatus );
         setSubmitting(false);
+        props.setEditId(idCreatedTask);
+        props.setEditMode(true);
     };
 
 
     const validationSchema = Yup.object(
         {
             title: Yup.string().required('Это поле обязательно для заполнения!'),
-            description: Yup.string().required("Это поле обязательно для заполнения!"),
+
         }
     )
 
@@ -50,21 +52,11 @@ export const AddTask = (props) => {
 
 
                         <div className={classes.blockButton}>
-                            <ButtonCreate type='submit'
-                                          disabled={!formik.isValid || formik.isSubmitting}>Сохранить</ButtonCreate>
+                            <ButtonCreate disabled={formik.isSubmitting}  type='submit'>Сохранить</ButtonCreate>
 
 
                         </div>
 
-                        <div className={classes.blockError}>
-                            {
-                                formik.status !== "Profile data updated" ?
-                                    <TextError>{formik.status}</TextError>
-                                    :
-                                    <div className={classes.goodMessage}>{formik.status}</div>
-                            }
-
-                        </div>
 
                     </Form>
                 )
