@@ -1,8 +1,6 @@
 import React from 'react'
 import {Field, ErrorMessage} from 'formik'
 import TextError from "../../TextError/TextError";
-import classes from "./Textarea.module.css"
-import cn from "classnames"
 
 function Textarea(props) {
     const {label, name, error, classField,classLabel, classBlock, ...rest} = props

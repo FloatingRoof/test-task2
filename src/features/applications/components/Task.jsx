@@ -26,9 +26,9 @@ export const Task = (props) => {
                 </span>
             </td>
             <td>
-                <span className={classes.statusBlock} style={{backgroundColor: props.statusRgb}}>
+                <div className={classes.statusBlock} style={{backgroundColor: props.statusRgb}}>
                     {props.status}
-                </span>
+                </div>
             </td>
             <td>
                 <span>

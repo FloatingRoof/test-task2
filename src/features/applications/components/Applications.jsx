@@ -20,14 +20,16 @@ export const Applications = (props) => {
     return (
         <div className={classes.main}>
             {
-                taskMore && <TaskMore
-                    task={editMode && props.tasks.filter(t => {
-                        return t.id == editId
-                    })[0]}
-                    id={editMode && editId} editMode={editMode} setTaskMore={setTaskMore}
-                    createNewTask={props.createNewTask}
-                    setEditMode={setEditMode}
-                    setEditId={setEditId}
+                taskMore && <TaskMore statuses={props.statuses}
+                                      task={editMode && props.tasks.filter(t => {
+                                          return t.id == editId
+                                      })[0]}
+                                      id={editMode && editId} editMode={editMode} setTaskMore={setTaskMore}
+                                      createNewTask={props.createNewTask}
+                                      editTask={props.editTask}
+                                      setEditMode={setEditMode}
+                                      setEditId={setEditId}
+                                      users={props.users}
                 />}
             <div className={classes.blockButton}>
                 <ButtonCreate click={openTaskMoreWithCreateTask}>Создать заявку</ButtonCreate>

@@ -24,7 +24,7 @@ export const TaskMore = (props) => {
 
 
                 <div className={classes.content}>
-                    {props.editMode ? <EditTask task={props.task}/> :
+                    {props.editMode ? <EditTask editTask={props.editTask} users={props.users} statuses={props.statuses} task={props.task}/> :
                         <AddTask createNewTask={props.createNewTask} setEditMode={props.setEditMode}
                                  setEditId={props.setEditId}/>}
 

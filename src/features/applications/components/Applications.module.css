@@ -87,6 +87,7 @@ thead th {
 }
 
 .statusBlock {
+    display: inline-block;
     border-radius: 30px;
     color: #ffffff;
     padding: 5px 15px;

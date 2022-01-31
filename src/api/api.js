@@ -1,9 +1,8 @@
 import axios from "axios";
 
-const tenantguid = "8c69c5d0-5600-4d67-8c20-4c851416e3ff";
+const tenantguid = "502cdfb9-651d-4634-b84f-17ebba1c42e2";
 
 const instance = axios.create({
-    //куки
     baseURL: 'http://intravision-task.test01.intravision.ru/',
 });
 
@@ -16,10 +15,19 @@ export const applicationsAPI = {
     getPriorities() {
         return instance.get(`api/${tenantguid}/Priorities`);
     },
+    getStatuses() {
+        return instance.get(`api/${tenantguid}/Statuses`);
+    },
+    getUsers() {
+        return instance.get(`api/${tenantguid}/Users`);
+    },
     createTask(name , description = "", statusId = 120066) {
         return instance.post(`api/${tenantguid}/Tasks`, {name, description, statusId});
     },
+    editTask(id, statusId,executorId ) {
+        return instance.put(`api/${tenantguid}/Tasks`, {id,  statusId,executorId });
+    },
     getTaskById(id) {
-        return instance.get(`/api/${tenantguid}/Tasks/${id}`);
+        return instance.get(`api/${tenantguid}/Tasks/${id}`);
     }
 }

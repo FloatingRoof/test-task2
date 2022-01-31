@@ -1,20 +1,18 @@
 
 .formEdit {
-
-
     display: grid;
     grid-template-areas: "l r";
     grid-template-columns: 2fr 230px;
     height: 100%;
 }
 
-.leftInformation{
+.leftInformation {
     grid-area: l;
     padding: 50px 35px;
 
 }
 
-.rightInformation{
+.rightInformation {
     grid-area: r;
     border-left: 1px solid #d7dce0;
     padding: 50px 35px;
@@ -37,14 +35,10 @@
 }
 
 
-
-
-
-
 .formEditTextareaDescription {
-    color:#525460;
+    color: #525460;
     padding-top: 10px;
-    height: 90px;
+    min-height: 90px;
     border: 0;
     background-color: transparent;
     resize: none;
@@ -56,6 +50,93 @@
 }
 
 
-.blockButton{
+.blockButton {
     margin-top: 55px;
+}
+
+.wrapStatus {
+    margin-bottom: 40px;
+}
+
+.statusBlock {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: #525460;
+}
+
+.buttonEdit {
+    color: #a09fa8;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buttonEdit:hover{
+    opacity: 0.5;
+}
+
+.statusColor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.block {
+    font-size: 14px;
+    color: #030303;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.header {
+    color: #a09fa8;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: normal;
+
+}
+
+.text {
+    display: flex;
+}
+
+.text img {
+    margin-right: 5px;
+}
+
+.wrapTag {
+    margin-bottom: 5px;
+}
+
+.blockTag {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.tag {
+    font-size: 12px;
+    color: #9da1aa;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #9da1aa;
+    padding: 5px;
+    display: inline-block;
+}
+
+.select{
+    border: 0;
+    background-color: transparent;
+    margin-top: 5px;
+
+}
+
+
+.editExecutor{
+    margin-top: 30px;
 }
